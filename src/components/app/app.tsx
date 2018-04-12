@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import { IAppProps } from './app.d';
-
 import './app.css';
+
+interface IAppProps {
+    store: any;
+}
 
 class App extends React.PureComponent<IAppProps, any> {
     render() {

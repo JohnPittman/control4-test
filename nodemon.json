@@ -1,19 +1,13 @@
 {
     "execMap": {
-      "js": "babel-node",
-      "jsx": "babel-node",
-      "ts": "babel-node",
-      "tsx": "babel-node"
+        "js": "ts-node",
+        "jsx": "ts-node",
+        "ts": "ts-node",
+        "tsx": "ts-node"
     },
-    "watch": [
-      "src/server.dev.ts",
-      "*.config.js",
-      ".babelrc"
-    ],
+    "watch": ["nodemon.json", "src/server.dev.ts", "*.config.js", "tsconfig.json"],
     "verbose": true,
-    "ignore": [
-      "node_modules"
-    ],
+    "ignore": ["node_modules"],
     "ext": "js jsx json ts tsx",
     "legacyWatch": true
-  }
+}

@@ -6,10 +6,7 @@
         "prettier": true,
         "interface-name": [true, "always-prefix"],
         "member-access": [true, "no-public"],
-        "object-literal-sort-keys": [
-            true,
-            "ignore-case",
-            "match-declaration-order"
-        ]
+        "no-var-requires": false,
+        "object-literal-sort-keys": [true, "ignore-case", "match-declaration-order"]
     }
 }

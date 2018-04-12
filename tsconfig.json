@@ -1,7 +1,8 @@
 {
+    "experimentalModules": true,
     "compilerOptions": {
-        "module": "es6",
-        "target": "es6",
+        "module": "commonjs",
+        "target": "es2017",
         "jsx": "react",
         "moduleResolution": "node",
         "allowJs": true,
@@ -18,8 +19,6 @@
         "paths": {
             "~/*": ["./*"]
         },
-        "typeRoots": [
-            "node_modules/@types"
-        ]
+        "typeRoots": ["node_modules/@types"]
     }
 }

@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     module: {
@@ -7,10 +8,7 @@ module.exports = {
                 exclude: /node_modules/,
                 test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        cacheDirectory: true
-                    }
+                    loader: 'awesome-typescript-loader'
                 }
             }
         ]
@@ -26,17 +24,14 @@ module.exports = {
         // All file types that can be imported within a JavaScript file.
         // Allows leaving the extension name off of the path.
         // Ex. import 'test.json';
-        extensions: [
-            '.js',
-            '.jsx',
-            '.ts',
-            '.tsx',
-            '.json',
-            '.css',
-            '.scss',
-            '.html'
-        ],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss', '.html'],
         // Fields in priority order to look for as the main file in package.json.
-        mainFields: ['browser', 'main']
+        mainFields: ['browser', 'main'],
+        plugins: [
+            // Typescript path resolution.
+            new TsConfigPathsPlugin({
+                configFile: './tsconfig.json'
+            })
+        ]
     }
 };
