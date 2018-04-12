@@ -1,7 +1,7 @@
-const webpack = require('webpack');
-const TsConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+import * as webpack from 'webpack';
+import * as TsConfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
-module.exports = {
+export default {
     module: {
         rules: [
             {

@@ -1,5 +1,4 @@
 {
-    "experimentalModules": true,
     "compilerOptions": {
         "module": "commonjs",
         "target": "es2017",
@@ -20,5 +19,6 @@
             "~/*": ["./*"]
         },
         "typeRoots": ["node_modules/@types"]
-    }
+    },
+    "exclude": ["node_modules"]
 }

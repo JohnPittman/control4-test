@@ -1,10 +1,10 @@
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
+import * as HTMLWebpackPlugin from 'html-webpack-plugin';
+import * as webpack from 'webpack';
+import * as webpackMerge from 'webpack-merge';
 
-const webpackSharedConfig = require('./webpack.shared.config');
+import webpackSharedConfig from './webpack.shared.config';
 
-module.exports = webpackMerge(webpackSharedConfig, {
+export default webpackMerge(webpackSharedConfig, {
     entry: {
         index: [
             'react-hot-loader/patch',

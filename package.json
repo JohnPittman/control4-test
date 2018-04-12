@@ -6,10 +6,10 @@
     "private": true,
     "scripts": {
         "build": "rm -rf public && webpack",
-        "build:dev": "rm -rf public && webpack --cache --config webpack.dev.config.js",
+        "build:dev": "rm -rf public && webpack --config webpack.dev.config.ts",
         "lint": "tslint --fix src/**/*.{ts,tsx} & stylelint --cache --fix src/**/*.css",
         "precommit": "npm run test && npm run lint",
-        "start:dev": "cross-env NODE_ENV=development nodemon src/server.dev.ts",
+        "start:dev": "cross-env NODE_ENV=development ts-node src/server.dev.ts",
         "test": "jest --config=jest.config.json",
         "test:dev": "jest --config=jest.config.json --watch"
     },

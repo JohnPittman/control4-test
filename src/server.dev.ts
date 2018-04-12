@@ -1,9 +1,9 @@
-const express = require('express');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
+import * as express from 'express';
+import * as webpack from 'webpack';
+import * as webpackDevMiddleware from 'webpack-dev-middleware';
+import * as webpackHotMiddleware from 'webpack-hot-middleware';
 
-const webpackDevConfig = require('../webpack.dev.config');
+import webpackDevConfig from '../webpack.dev.config';
 
 // Global application variables.
 const PORT = process.env.PORT || 9000;

@@ -1,13 +1,13 @@
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
+import * as HTMLWebpackPlugin from 'html-webpack-plugin';
+import * as MiniCSSExtractPlugin from 'mini-css-extract-plugin';
+import * as OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+import * as webpack from 'webpack';
+import * as webpackMerge from 'webpack-merge';
 
-const webpackSharedConfig = require('./webpack.shared.config');
+import webpackSharedConfig from './webpack.shared.config';
 
-module.exports = webpackMerge(webpackSharedConfig, {
+export default webpackMerge(webpackSharedConfig, {
     entry: {
         index: [`${__dirname}/src/client.tsx`]
     },
@@ -25,11 +25,7 @@ module.exports = webpackMerge(webpackSharedConfig, {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    MiniCSSExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader'
-                ]
+                use: [MiniCSSExtractPlugin.loader, 'css-loader', 'postcss-loader']
             }
         ]
     },
