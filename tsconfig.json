@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "importHelpers": true,
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": false,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "pretty": true,
+        "skipLibCheck": true,
+        "baseUrl": "src",
+        "paths": {
+            "~/*": ["./*"]
+        },
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+# Download base image.
+FROM node:9.11.1-alpine
+
+# Create app directory.
+RUN mkdir -p /usr/app
+
+# Set initial command-line directory.
+WORKDIR /usr/app
+
+# Install app dependencies.
+COPY package.json /usr/app/
+RUN npm install --quiet
+
+# Copy app source to container.
+COPY . /usr/app
+
+# Expose port.
+EXPOSE 9000
+
+# Set volumes for live editing.
+VOLUME ["/usr/app"]
+
+CMD ["npm", "run", "start:dev"]

@@ -1,0 +1,18 @@
+:root {
+    --color-primary-1: #7fc7ff;
+    --color-primary-2: #65adff;
+    --color-primary-3: #4c94e6;
+    --color-second-1: #94a6ae;
+    --color-second-2: #7a8c94;
+    --color-second-3: #61737b;
+    --color-third-1: #ffffff;
+    --color-fourth-2: ##9fa3a7;
+    --color-fourth-3: #768089;
+    --color-fourth-3: #2a292a;
+    --color-status-critical: darkred;
+    --color-status-debug: grey;
+    --color-status-error: red;
+    --color-status-info: blue;
+    --color-status-success: green;
+    --color-status-warn: yellow;
+}

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  gridplus-takehome-web:
+    restart: always
+    container_name: gridplus-takehome
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    ports:
+     - 9000:9000
+    volumes:
+     - .:/usr/app

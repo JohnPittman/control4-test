@@ -1,0 +1,36 @@
+{
+    "presets": [
+        "@babel/typescript",
+        [
+            "@babel/env",
+            {
+                "targets": {
+                    "node": "9.11.1"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "~": "./src"
+                },
+                "root": ["./src"]
+            }
+        ],
+        "@babel/plugin-transform-strict-mode",
+        "transform-class-properties",
+        "@babel/transform-react-jsx"
+    ],
+    "env": {
+        "development": {
+            "plugins": ["react-hot-loader/babel"]
+        },
+        "test": {
+            "plugins": ["transform-css-import-require-to-string"]
+        }
+    },
+    "ignore": ["node_modules"]
+}
