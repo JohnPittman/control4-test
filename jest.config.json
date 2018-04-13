@@ -5,7 +5,7 @@
         "\\.(css)$": "react"
     },
     "projects": ["<rootDir>/src"],
-    "setupTestFrameworkScriptFile": "./enzyme.config.js",
+    "setupTestFrameworkScriptFile": "./enzyme.config.ts",
     "transform": {
         "\\.js$|\\.jsx$|\\.ts$|\\.tsx$": "ts-jest"
     },

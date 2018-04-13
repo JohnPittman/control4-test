@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { createStore } from 'redux';
 
 import App from '~/components/app/app';
@@ -6,4 +7,4 @@ import renderClient from '~/utils/render-client';
 
 const store = createStore(reducer);
 
-renderClient(App, store);
+renderClient(<App store={store} />);

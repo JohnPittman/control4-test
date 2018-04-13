@@ -20,4 +20,4 @@ EXPOSE 9000
 # Set volumes for live editing.
 VOLUME ["/usr/app"]
 
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "start-docker:dev"]

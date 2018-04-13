@@ -7,6 +7,6 @@ services:
       context: .
       dockerfile: ./Dockerfile.dev
     ports:
-     - 9000:9000
+     - 4444:4444
     volumes:
      - .:/usr/app

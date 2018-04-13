@@ -12,10 +12,6 @@
 
 docker-compose -f docker-compose.dev.yml up --build
 
-## Stop
-
-docker-compose down
-
 ## View
 
 [Open in browser](http://localhost:9000)

@@ -5,7 +5,7 @@
         "ts": "ts-node",
         "tsx": "ts-node"
     },
-    "watch": ["nodemon.json", "src/server.dev.ts", "*.config.js", "tsconfig.json"],
+    "watch": ["nodemon.json", "fuse.ts", "tsconfig.json"],
     "verbose": true,
     "ignore": ["node_modules"],
     "ext": "js jsx json ts tsx",

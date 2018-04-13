@@ -10,7 +10,7 @@ class App extends React.PureComponent<IAppProps, any> {
     render() {
         return (
             <div className="app">
-                <span>App</span>
+                <span>7ff7</span>
             </div>
         );
     }
