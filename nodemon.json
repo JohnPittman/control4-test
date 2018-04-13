@@ -1,13 +1,11 @@
 {
     "execMap": {
-        "js": "ts-node",
-        "jsx": "ts-node",
         "ts": "ts-node",
         "tsx": "ts-node"
     },
-    "watch": ["nodemon.json", "fuse.ts", "tsconfig.json"],
+    "watch": ["nodemon.json", "tsconfig.json", "fuse.ts"],
     "verbose": true,
     "ignore": ["node_modules"],
-    "ext": "js jsx json ts tsx",
+    "ext": "ts tsx",
     "legacyWatch": true
 }

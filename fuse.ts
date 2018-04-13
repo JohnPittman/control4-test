@@ -18,7 +18,7 @@ context(() => {
     if (contextConfig !== null) {
         contextConfig = FuseBox.init({
             target: 'browser@es6',
-            cache: !isProduction,
+            cache: true,
             hash: isProduction,
             log: true,
             useTypescriptCompiler: true,

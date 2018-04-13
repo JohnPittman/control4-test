@@ -5,9 +5,9 @@
     "main": "_",
     "private": true,
     "scripts": {
-        "build": "cross-env NODE_ENV=production ts-node fuse.ts build",
+        "build": "npm run clean && cross-env NODE_ENV=production ts-node fuse.ts build",
         "build:dev": "cross-env NODE_ENV=development ts-node fuse.ts build:dev",
-        "clean": "rm -rf public .fusebox",
+        "clean": "rm -rf public",
         "lint": "tslint --fix src/**/*.{ts,tsx} & stylelint --cache --fix src/**/*.css",
         "precommit": "npm run test && npm run lint",
         "start:dev": "cross-env NODE_ENV=development nodemon fuse.ts start:dev",
