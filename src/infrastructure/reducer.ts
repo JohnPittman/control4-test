@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import accountReducer from '~/infrastructure/account/reducer';
 import appReducer from '~/infrastructure/app/reducer';
+import citiesReducer from '~/infrastructure/cities/reducer';
+import weatherReducer from '~/infrastructure/weather/reducer';
 
 export default combineReducers({
     app: appReducer,
-    account: accountReducer
+    cities: citiesReducer,
+    weather: weatherReducer
 });

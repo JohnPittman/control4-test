@@ -1,17 +1,12 @@
-import { STORE_ACCESS_KEY } from './constants';
+function getDefaultState() {
+    return {
+        weatherAPIAccessKey: 'da65fafb6cb9242168b7724fb5ab75e7'
+    };
+}
 
-const getInitialState = () => {
-    return {};
-};
-
-export default (state = getInitialState(), action) => {
+export default function appReducer(state = getDefaultState(), action) {
     switch (action.type) {
-        case STORE_ACCESS_KEY:
-            return {
-                ...state,
-                accessKey: action.payload
-            };
         default:
             return state;
     }
-};
+}

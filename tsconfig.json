@@ -1,24 +1,26 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es2017",
+        "target": "es2015",
         "jsx": "react",
         "moduleResolution": "node",
         "allowJs": true,
         "importHelpers": true,
         "allowSyntheticDefaultImports": true,
         "isolatedModules": false,
+        "noEmitHelpers": true,
         "noUnusedLocals": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
+        "noImplicitAny": false,
+        "noLib": false,
         "suppressImplicitAnyIndexErrors": true,
         "pretty": true,
         "skipLibCheck": true,
-        "baseUrl": "src",
+        "baseUrl": ".",
         "paths": {
-            "~/*": ["./*"]
+            "~/*": ["./src/*"]
         },
         "typeRoots": ["node_modules/@types"]
-    },
-    "exclude": ["node_modules"]
+    }
 }

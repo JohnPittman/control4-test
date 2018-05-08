@@ -1,0 +1,11 @@
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--color-second-3);
+}
+
+.weather-details-header {
+    height: 60px;
+    background-color: yellow;
+}

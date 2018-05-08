@@ -1,1 +1,0 @@
-export const STORE_ACCESS_KEY = 'STORE_ACCESS_KEY';

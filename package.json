@@ -1,47 +1,67 @@
 {
-    "name": "gridplus-takehome",
+    "name": "control4-takehome",
     "version": "1.0.0",
-    "description": "Takehome test for Grid+.",
+    "description": "Takehome test for Control4.",
     "main": "_",
     "private": true,
     "scripts": {
-        "build": "npm run clean && cross-env NODE_ENV=production ts-node fuse.ts build",
-        "build:dev": "cross-env NODE_ENV=development ts-node fuse.ts build:dev",
+        "build": "npm run clean && cross-env NODE_ENV=production ts-node fuse.js build",
+        "build:dev": "npm run clean && cross-env NODE_ENV=development ts-node fuse.js build",
+        "build-docs":
+            "rm -rf docs && typedoc --out docs --theme minimal --mode file --exclude **/*.test.* src",
         "clean": "rm -rf public",
         "lint": "tslint --fix src/**/*.{ts,tsx} & stylelint --cache --fix src/**/*.css",
         "precommit": "npm run test && npm run lint",
-        "start:dev": "cross-env NODE_ENV=development nodemon fuse.ts start:dev",
-        "start-docker:dev": "cross-env NODE_ENV=development nodemon fuse.ts start-docker:dev",
-        "test": "jest --config=jest.config.json -o",
-        "test:watch": "jest --config=jest.config.json --watch"
+        "start-local:dev":
+            "npm run clean && cross-env NODE_ENV=development nodemon fuse.js start-local:dev",
+        "start-local-docker:dev":
+            "npm run clean && cross-env NODE_ENV=development nodemon --legacy-watch fuse.js start-local-docker:dev",
+        "test": "cross-env NODE_ENV=production jest --no-cache",
+        "test-watch:dev": "cross-env NODE_ENV=development jest --config=jest.config.json --watch"
+    },
+    "jest": {
+        "globals": {
+            "ts-jest": {
+                "tsConfigFile": "tsconfig.json"
+            }
+        },
+        "moduleFileExtensions": ["ts", "js", "tsx", "jsx"],
+        "transform": {
+            "^.+\\.(ts|tsx)$": "ts-jest"
+        },
+        "testRegex": ".\\.test\\.(js?|jsx?|ts?|tsx?)$",
+        "testEnvironment": "node"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GridPlus/john-pittman-takehome.git"
+        "url": "git+https://github.com/chickendinosaur/control4-takehome.git"
     },
     "author": "John Pittman",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/GridPlus/john-pittman-takehome/issues"
+        "url": "https://github.com/chickendinosaur/control4-takehome/issues"
     },
-    "homepage": "https://github.com/GridPlus/john-pittman-takehome#readme",
+    "homepage": "https://github.com/chickendinosaur/control4-takehome#readme",
     "dependencies": {
         "cross-env": "^5.1.4",
         "express": "^4.16.3",
         "fuse-box": "^3.2.1",
         "postcss": "^6.0.21",
         "postcss-nested": "^3.0.0",
+        "postcss-nested-ancestors": "^2.0.0",
         "react": "^16.3.1",
         "react-dom": "^16.3.1",
         "react-redux": "^5.0.7",
         "react-router-dom": "^4.2.2",
         "redux": "^3.7.2",
+        "redux-thunk": "^2.2.0",
         "ts-node": "^5.0.1",
-        "typescript": "^2.8.1",
+        "typescript": "^2.8.3",
         "uglify-es": "^3.3.9"
     },
     "devDependencies": {
         "@types/jest": "^22.2.2",
+        "@types/react": "^16.3.10",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
         "jest": "^22.4.3",
@@ -53,6 +73,7 @@
         "tslint": "^5.9.1",
         "tslint-config-prettier": "^1.10.0",
         "tslint-plugin-prettier": "^1.3.0",
-        "tslint-react": "^3.5.1"
+        "tslint-react": "^3.5.1",
+        "typedoc": "^0.11.1"
     }
 }

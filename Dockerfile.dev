@@ -1,5 +1,5 @@
 # Download base image.
-FROM node:9.11.1-alpine
+FROM node:8.9.1-alpine
 
 # Create app directory.
 RUN mkdir -p /usr/app
@@ -20,4 +20,4 @@ EXPOSE 9000
 # Set volumes for live editing.
 VOLUME ["/usr/app"]
 
-CMD ["npm", "run", "start-docker:dev"]
+CMD ["npm", "run", "start-local-docker:dev"]
